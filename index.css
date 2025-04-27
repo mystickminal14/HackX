@@ -1,8 +1,10 @@
 :root {
     --font-primary: 'Work Sans';
     --font-secondary: 'Libre Franklin';
+    --font-poppins: 'Poppins';
     --color-text-primary: white;
     --color-background: black;
+    --button-primary: #FF0004
 }
 
 * {
@@ -10,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html,
 body {
     height: 100%;
@@ -19,34 +22,505 @@ body {
     color: var(--color-text-primary);
 }
 
+#preloader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .letters {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .letter {
+    font-size: 5rem;
+    color: white;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+  }
+  
 .nav {
     display: flex;
-    height: 50px;
-    background-color: gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 5px;
+    height: 70px;
+    z-index: 111;
     align-items: center;
     justify-content: space-around;
 
 }
 
 .nav .imgFit {
-    width: 80px;
-    height: 40px;
+    width: 100px;
+    height: 60px;
 }
 
 .nav .imgFit img {
     width: 80px;
-    height: 50px;
+    height: 60px;
     object-fit: cover;
 }
-.nav .menu{
+
+.nav .menu {
+    padding-top: 4px;
     list-style: none;
-    display:flex;
-    gap:15px;
+    display: flex;
+    font-size: 14px;
+    gap: 20px;
+    align-items: center;
+    font-family: var(--font-poppins);
+}
+
+.nav .social-icons {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
     font-family: var(--font-secondary);
 }
-.nav .social-icons{
-    list-style: none;
-    display:flex;
-    gap:15px;
-    font-family: var(--font-secondary);
+
+
+/* page 1 style */
+.page1 {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.page1 .left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+}
+
+.page1 .left-content h3 {
+    font-weight: 500;
+    color: var(--button-primary);
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.page1 .left-content p {
+    width: 40ch;
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.page1 .left-content button {
+    width: 140px;
+    height: 40px;
+    font-weight: 300;
+    font-size: 16px;
+    background-color: var(--button-primary);
+    color: var(--color-text-primary);
+    border-radius: 25px;
+}
+
+.page1 .left-content div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.page1 .left-content div h1 {
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.page1 .right-content {
+    position: relative;
+}
+
+.page1 .right-content .vr-asset {
+    width: 580px;
+    position: relative;
+}
+
+.page1 .right-content .vr-asset img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.page1 .right-content .timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 7px;
+    color: var(--button-primary);
+    z-index: 1;
+    text-align: center;
+}
+
+.page1 .right-content .timer h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* .page1 .right-content .timer h1,  */
+.page1 .right-content .timer h2 {
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+}
+
+.page1 .right-content .timer p {
+    font-size: 25px;
+    margin: 0;
+
+}
+
+/* PAGE 2----------------------------------------------------- */
+.page2 {
+    width: 100%;
+    font-family: var(--font-primary);
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2 .left {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.page2 .left h1 {
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: var(--button-primary);
+}
+
+.page2 .left p {
+    width: 40ch;
+    text-align: justify;
+}
+
+.time {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline {
+    font-weight: 500;
+    color: var(--button-primary);
+}
+
+.timeline span {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/* .page3-------------------- */
+
+.page3 {
+    display: flex;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    position: relative;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-text-primary);
+}
+
+.outer-ring,
+.outer-ring2,
+.outer-ring3,
+.outer-ring4,
+.outer-ring5 {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.outer-ring {
+    top: -15px;
+    left: 11%;
+}
+
+.outer-ring2 {
+    top: -15px;
+    left: 30.5%;
+}
+
+.outer-ring3 {
+    top: -15px;
+    left: 49.5%;
+}
+
+.time {
+    margin-top: 80px;
+}
+
+.outer-ring4 {
+    top: -15px;
+    left: 69.5%;
+}
+
+.outer-ring5 {
+    top: -15px;
+    left: 88.5%;
+}
+
+
+.circle {
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.line .firstLine,
+.line .secondLine,
+.line .thirdLine,
+.line .fourthLine,
+.line .fifthLine {
+    position: absolute;
+    width: 1px;
+    height: 60px;
+    background-color: var(--color-text-primary);
+}
+
+.line .firstLine {
+    top: 56px;
+    left: 12.5%;
+}
+
+.line .secondLine {
+    top: -110px;
+    left: 32%;
+}
+
+.line .thirdLine {
+    top: 56px;
+    left: 51.1%;
+}
+
+.line .fourthLine {
+    top: -110px;
+    left: 71.1%;
+}
+
+.line .fifthLine {
+    top: 56px;
+    left: 90.1%;
+}
+
+.secondLine,
+.fourthLine {
+    transform-origin: bottom;
+}
+
+
+
+.line .firstLinecircle,
+.line .secondLinecircle,
+.line .thirdLinecircle,
+.line .fourLinecircle,
+.line .fiveLinecircle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-text-primary);
+    border-radius: 50%;
+}
+
+.line .firstLinecircle {
+    top: calc(41px + 80px - 4px);
+    left: 12%;
+}
+
+.line .thirdLinecircle {
+    top: calc(41px + 80px - 4px);
+
+    left: 50.6%;
+
+}
+
+.line .secondLinecircle {
+    top: calc(-44px - 80px + 4px);
+    left: 31.5%;
+
+}
+
+.line .fourLinecircle {
+    top: calc(-44px - 80px + 4px);
+    left: 70.6%;
+
+}
+
+.line .fiveLinecircle {
+    top: calc(41px + 80px - 4px);
+    left: 89.6%;
+}
+
+.line .date,
+.line .date2,
+.line .date3,
+.line .date4,
+.line .date5 {
+    position: absolute;
+    width: 200px;
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.line .date {
+    top: -42px;
+    left: 11%;
+}
+
+.line .date2 {
+    top: 25px;
+    left: 30.5%;
+}
+
+.line .date3 {
+    top: -42px;
+    left: 49.5%;
+}
+
+.line .date4 {
+    top: 25px;
+    left: 67.5%;
+}
+
+.line .date5 {
+    top: -42px;
+    left: 85.5%;
+}
+
+.line #jj,
+.line #jj2,
+.line #jj3,
+.line #jj4,
+.line #jj5 {
+    position: absolute;
+
+    width: 200px;
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.line #jj {
+    top: 150px;
+    left: 8%;
+}
+
+.line #jj2 {
+    top: -180px;
+    left: 24%;
+}
+
+.line #jj3 {
+    top: 150px;
+    left: 45%;
+}
+
+.line #jj4 {
+    top: -190px;
+    left: 61%;
+}
+
+.line #jj5 {
+    top: 150px;
+    left: 84.7%;
+}
+.pool{
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:25px
+}
+.page4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:25px;
+    margin-top: 40px;
+    align-items: center;
+    padding-bottom: 220px;
+}
+
+.card {
+    width: 280px;
+    height: 360px;
+    padding: 2rem;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+   
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    width: 120px;
+}
+
+.logo img {
+    width: 120px;
+    object-fit: cover;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    color: #ff4d6d;
+    letter-spacing: 2px;
+}
+
+.national {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-family: var(--font-poppins);
+
+}
+
+.place {
+    margin-top: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+}
+

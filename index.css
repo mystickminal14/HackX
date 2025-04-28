@@ -42,6 +42,7 @@ body {
     width: 100%;
     padding: 5px;
     height: 70px;
+    background-color: black;
     z-index: 111;
     align-items: center;
     justify-content: space-around;
@@ -758,3 +759,133 @@ body {
         font-size: 20px;
     }
 }
+.footer {
+    width: 100%;
+    background: #000;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 30%;
+    height: 100%;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .address-left .location,
+  .phone {
+    color: white;
+  }
+
+  .fa-solid {
+    margin-right: 15px;
+  }
+
+  .address-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .icons a,
+  .title,
+  .address-right .email {
+    color: white;
+  }
+
+  .right-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+  }
+
+  .icons {
+    display: flex;
+    gap: 20px;
+    width: 60%;
+  }
+
+  .address {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .address-right {
+    width: 60%;
+  }
+
+  .footer {
+    border-top: 1px solid #cbcaca;
+    border-bottom: 1px solid #cbcaca;
+
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 20px;
+    }
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 100%;
+      text-align: center;
+    }
+
+    .right-content {
+      width: 100%;
+      align-items: center;
+    }
+
+    .address {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .address-left,
+    .address-right {
+      width: 100%;
+      text-align: center;
+    }
+
+    .title {
+      width: 200px;
+    }
+
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+  }

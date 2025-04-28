@@ -686,6 +686,7 @@ body {
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+        margin-bottom: 100px;
     }
 
     .page2 .right {

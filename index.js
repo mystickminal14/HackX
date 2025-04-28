@@ -60,21 +60,24 @@ tl.from(".nav .social-icons li", {
   scale: 0.2,
   stagger: 0.1,
 });
+let mm = gsap.matchMedia();
 
-gsap.from(".page2 .left", {
-  scrollTrigger: {
-    trigger: ".page2",
-    scroller: "body",
-    start: "top 80%",
-    end: "top 30%",
-    scrub: true,
-  },
-  x: -200,
-  y: -100,
-  rotate: -10,
-  opacity: 0,
-  ease: "power2.out",
+mm.add("(min-width: 901px)", () => {
+  gsap.from(".page2 .left", {
+    scrollTrigger: {
+      trigger: ".page2",
+      scroller: "body",
+      start: "top 80%",
+      end: "top 30%",
+      scrub: true,
+    },
+    y: 100,
+    opacity: 0,
+    ease: "power2.out",
+  });
 });
+
+
 
 gsap.from(".page2 .right", {
   scrollTrigger: {

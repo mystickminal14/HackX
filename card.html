@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .badge {
+      width: 100px;
+      height: 100px;
+      background: #FFD369;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .badge img {
+      width: 60%;
+    }
+
+    .content {
+      margin-top: 60px;
+    }
+
+    .content h2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .content p {
+      margin: 8px 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .space {
+      height: 16px;
+      width: 85%;
+      background-color: #fff;
+      position: absolute;
+      bottom: -16px;
+      left: 25px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="badge">
+      <img src="your-image.png" alt="Trophy Badge">
+    </div>
+    <div class="content">
+      <h2>NATIONAL LEVEL</h2>
+      <p>1st Place: Rs. 555,555</p>
+      <p>2nd Place: Rs. 222,222</p>
+      <p>3rd Place: Rs. 111,111</p>
+    </div>
+    <div class="space">
+
+    </div>
+  </div>
+</body>
+
+</html>

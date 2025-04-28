@@ -56,6 +56,10 @@ body {
     justify-content: space-around;
 
 }
+.social-icons a {
+    color: white;
+    text-decoration: none;
+}
 
 .nav .imgFit {
     width: 100px;

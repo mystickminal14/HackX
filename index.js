@@ -166,23 +166,41 @@ tl2
   .from(".fifthLine", { height: 0, opacity: 0 })
   .from(".fiveLinecircle", { opacity: 0 })
   .from("#jj5", { y: -50, opacity: 0 });
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-  ScrollTrigger.matchMedia({
-    "(min-width: 601px)": function() {
-      gsap.from('.page4 .card', {
-        scrollTrigger: {
-          trigger: ".pool",
-          scroller: "body",
-          start: "top 50%",
-          markers: true
-        },
-        y: 80,
-        stagger: 0.2,
-        duration: 1.2,
-        opacity: 0,
-        ease: "power2.out",
-      });
-    }
+ScrollTrigger.matchMedia({
+  "(min-width: 601px)": function () {
+    gsap.from('.page4 .card', {
+      scrollTrigger: {
+        trigger: ".pool",
+        scroller: "body",
+        start: "top 50%",
+      },
+      y: 80,
+      stagger: 0.2,
+      duration: 1.2,
+      opacity: 0,
+      ease: "power2.out",
+    });
+  }
+});
+
+document.querySelector('.menu-icon').addEventListener('click', function () {
+  const menus = document.querySelector('.navbar-mobile');
+  menus.classList.toggle('active');
+  this.querySelector('i').classList.toggle('fa-bars');
+  this.querySelector('i').classList.toggle('fa-times');
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle-mobile');
+
+  dropdownToggles.forEach(function (dropdownToggle) {
+    dropdownToggle.addEventListener('click', function (event) {
+      event.preventDefault();
+      const dropdownMenu = dropdownToggle.nextElementSibling;
+      dropdownMenu.classList.toggle('show-dropdown-mobile');
+    });
   });
-  
+});

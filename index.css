@@ -136,6 +136,13 @@ body {
 }.show-dropdown-mobile {
     display: block;
 }
+.register-button a{
+    color: white;
+    text-decoration: none;
+}
+.register-button{
+    border: none;
+}
 /* page 1 style */
 .page1 {
     width: 100%;

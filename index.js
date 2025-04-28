@@ -166,4 +166,23 @@ tl2
   .from(".fifthLine", { height: 0, opacity: 0 })
   .from(".fiveLinecircle", { opacity: 0 })
   .from("#jj5", { y: -50, opacity: 0 });
+  gsap.registerPlugin(ScrollTrigger);
 
+  ScrollTrigger.matchMedia({
+    "(min-width: 601px)": function() {
+      gsap.from('.page4 .card', {
+        scrollTrigger: {
+          trigger: ".pool",
+          scroller: "body",
+          start: "top 50%",
+          markers: true
+        },
+        y: 80,
+        stagger: 0.2,
+        duration: 1.2,
+        opacity: 0,
+        ease: "power2.out",
+      });
+    }
+  });
+  

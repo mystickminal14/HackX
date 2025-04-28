@@ -117,7 +117,7 @@ body {
     height: 250px;
     border-radius: 50%;
     position: absolute;
-    z-index: -1;
+   
     background-color: #1A1A1A;
 }
 
@@ -129,7 +129,6 @@ body {
     border-radius: 50%;
     opacity: 50%;
     position: absolute;
-    z-index: -1;
     background-color: #484848;
 }
 
@@ -304,6 +303,9 @@ select {
 }
 
 @media(max-width:556px) {
+    .reg-card .black-section .circle,.reg-card .black-section .circle2  {
+z-index: -1;
+    }
     .reg-card {
         width:300px;
         flex-direction: column;

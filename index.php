@@ -142,7 +142,7 @@
 	</div>
 
 	<div class="page2Mobile">
-		<img src="./assets/timeline.png" alt="Timeline image">
+		<img src="./assets/timeline.png" alt="Timeline image" width="80%">
 	</div>
 	<div class="page3">
 		<div class="line">

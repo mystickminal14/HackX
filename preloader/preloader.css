@@ -21,6 +21,10 @@ body {
     font-family: var(--font-primary);
     background-color: var(--color-background);
     color: var(--color-text-primary);
+    background-image: url('../assets/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
 }
 
 .preloader {

@@ -22,7 +22,7 @@
 	<!--HEADER SECTION ------------------------------------------------------------->
 	<div class="nav">
 		<div class="imgFit">
-			<a href="index.html"><img src="./assets/hackX.png" alt="HackX Logo" /></a>
+			<a href="index.php"><img src="./assets/hackX.png" alt="HackX Logo" /></a>
 		</div>
 		<ul class="menu">
 			<a href="#home">
@@ -83,7 +83,7 @@
 			<p>
 				Join HackX 2025, Nepal's Premier National Level Hackathon for Grade 12 Students
 			</p>
-			<button class="register-button"><a href="./registration/registration.html">Register Now</a></button>
+			<button class="register-button"><a href="./registration/registration.php">Register Now</a></button>
 		</div>
 		<div class="right-content">
 			<div class="vr-asset">

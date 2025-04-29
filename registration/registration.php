@@ -20,7 +20,7 @@
 <body>
     <div class="nav">
         <div class="imgFit">
-            <a href="../index.html"><img src="../assets/hackX.png" alt="HackX Logo" /></a>
+            <a href="../index.php"><img src="../assets/hackX.png" alt="HackX Logo" /></a>
         </div>
 
         <ul class="social-icons">
@@ -74,35 +74,35 @@
                 <div class="circle2"></div>
             </div>
             <div class="white">
-                <div class="form">
+                <form method="POST" class="form" action="registration.php" onsubmit="return validateForm()">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" class="underline-input2">
+                        <input type="text" id="name" name="name" class="underline-input2" required>
                     </div>
                     <div class="first">
-
                         <div class="form-group">
                             <label for="teamName">Team Name</label>
-                            <input type="text" id="teamName" class="underline-input">
+                            <input type="text" id="teamName" name="teamName" class="underline-input" required>
                         </div>
                         <div class="form-group">
                             <label for="college">College Name</label>
-                            <input type="text" id="college" class="underline-input">
+                            <input type="text" id="college" name="collegeName" class="underline-input" required>
                         </div>
                     </div>
                     <div class="second">
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="text" id="email" class="underline-input">
+                            <input type="email" id="email" name="email" class="underline-input" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="text" id="phone" class="underline-input">
+                            <input type="text" id="phone" name="phone" class="underline-input" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="province">Select Province?</label>
-                        <select id="province" name="province">
+                        <select id="province" name="province" required>
+                            <option value="">--Select--</option>
                             <option value="province1">Province-1</option>
                             <option value="province2">Province-2</option>
                             <option value="province3">Province-3</option>
@@ -114,22 +114,68 @@
                     </div>
                     <div class="form-group">
                         <label for="queries">Extra Queries</label>
-                        <input type="text" placeholder='Write your message..' id="queries" class="underline-input2">
+                        <input type="text" placeholder="Write your message.." id="queries" name="queries" class="underline-input2">
                     </div>
-
-                </div>
-                <div class="brnD">
-                    <div class="btn">
-                        Register Now
+                    <div class="brnD">
+                        <button type="submit" name="submit" class="btn">Register Now</button>
                     </div>
+                </form>
 
-                </div>
             </div>
-
         </div>
-    </div>
 
     </div>
+    <script>
+        function validateForm() {
+            let phone = document.getElementById("phone").value;
+            let email = document.getElementById("email").value;
+            const phonePattern = /^[0-9]{10}$/; 
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true; 
+        }
+    </script>
 </body>
 
 </html>
+<?php
+include '../connection.php';
+if (isset($_POST['submit'])) {
+    $name = trim($_POST['name']);
+    $teamName = trim($_POST['teamName']);
+    $collegeName = trim($_POST['collegeName']);
+    $email = trim($_POST['email']);
+    $phone = trim($_POST['phone']);
+    $province = trim($_POST['province']);
+    $queries = trim($_POST['queries']);
+
+    if (empty($name) || empty($teamName) || empty($collegeName) || empty($email) || empty($phone) || empty($province)) {
+        echo "<script>alert('Please fill in all required fields.');</script>";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Invalid email format.');</script>";
+    } elseif (!preg_match('/^[0-9]{10}$/', $phone)) {
+        echo "<script>alert('Phone number must be 10 digits.');</script>";
+    } else {
+        // Use prepared statement
+        $stmt = $conn->prepare("INSERT INTO registration (full_name, team_name, college_name, email, phone, province, queries) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssss", $name, $teamName, $collegeName, $email, $phone, $province, $queries);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Thank you! Your hackathon registration is successful!!'); window.location.href='../index.php';</script>";
+        } else {
+            echo "<script>alert('ERROR WHILE INSERTING DATA!!');</script>";
+        }
+        $stmt->close();
+    }
+}
+?>

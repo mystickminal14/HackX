@@ -92,7 +92,7 @@ body {
 
 .reg-card .black-section {
     width: 320px;
-    height: 400px;
+    height: 100%;
     overflow: hidden;
     padding: 15px;
     padding-left: 30px;

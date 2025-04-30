@@ -116,9 +116,11 @@ body {
 }
 .nav .menu a{
     text-decoration: none;
-    color: var(--color-text-primary);
+    color: var(--color-text-primary);transition: transform 0.3s ease-in-out;
 }
-
+.nav .menu a:hover {
+    transform: translateY(-5px); /* Hover effect */
+  }
 .nav .social-icons {
     list-style: none;
     display: flex;

@@ -35,7 +35,7 @@
 				<li>Timeline</li>
 			</a>
 			<a href="#prize">
-				<li>Price</li>
+				<li>Prize</li>
 			</a>
 			<a href="#contact">
 				<li>Contact</li>

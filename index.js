@@ -2,20 +2,20 @@
 
 
 
-var preloader= document.getElementsByClassName("preloader")[0];
-onload=()=>{
+var preloader = document.getElementsByClassName("preloader")[0];
+onload = () => {
   setTimeout(() => {
     preloader.style.display = 'none';
-  }, 1500); 
+  }, 1500);
 }
 var tl = gsap.timeline();
-gsap.from(".format2 img",{
-  duration:1,
-  x:-300
+gsap.from(".format2 img", {
+  duration: 1,
+  x: -300
 })
-gsap.from(".format img",{
-  duration:1,
-  x:300
+gsap.from(".format img", {
+  duration: 1,
+  x: 300
 })
 
 tl.from(".nav .imgFit img", {
@@ -112,7 +112,7 @@ gsap.from(".page2 .right", {
 
 
 
-const hackathonDate = new Date("May 20, 2025 00:00:00").getTime();
+const hackathonDate = new Date("June 20, 2025 00:00:00").getTime();
 
 const timerElements = document.querySelectorAll(".timer h1");
 function updateTimer() {

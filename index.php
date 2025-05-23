@@ -232,9 +232,9 @@
 			</div>
 			<div class="content">
 				<h2>NATIONAL LEVEL</h2>
-				<p>1st Place: Rs. 555,555</p>
-				<p>2nd Place: Rs. 222,222</p>
-				<p>3rd Place: Rs. 111,111</p>
+				<p>winner Rs. 555,555 /-</p>
+				<p>1st runner-up Rs. 222,222 /-</p>
+				<p>2nd runner-up Rs. 111,111 /-</p>
 			</div>
 			<div class="space">
 
@@ -249,8 +249,8 @@
 			</div>
 			<div class="content">
 				<h2>PROVINCIAL LEVEL</h2>
-				<p class="place">1st Place: Rs. 30,000</p>
-				<p class="place">2nd Place: Rs. 20,000</p>
+				<p class="place">winner Rs. 30,000 /-</p>
+				<p class="place">1st runner-up Rs. 20,000 /-</p>
 			</div>
 			<div class="space">
 
@@ -293,7 +293,7 @@
 				<div class="footer-social-media">
 					<div class="footer-title">Social Media</div>
 					<div class="footer-icons">
-						<a href="https://www.facebook.com/HackXLBEF/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+						<a href="https://www.facebook.com/HackXLBEF/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
 						<a href="https://www.instagram.com/hackxatlbef" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 						<a href="https://www.linkedin.com/company/hack-x-lbef/posts/?feedView=all" target="_blank"><i
 								class="fa-brands fa-linkedin"></i></a>

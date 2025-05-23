@@ -302,6 +302,7 @@ body {
     display: flex;
     gap: 4px;
     flex-direction: column;
+    line-height: 30px;
 }
 
 .page2 .left h1 {
